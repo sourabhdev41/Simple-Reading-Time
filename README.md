@@ -1,62 +1,84 @@
-# NRW Related Posts Lite
+# Simple Reading Time
 
-A lightweight WordPress plugin that automatically displays related posts based on shared categories.
+A lightweight WordPress plugin that automatically displays estimated reading time on blog posts.
 
 ## Features
 
-✅ Automatically finds related posts
+✅ Automatic word count calculation
 
-✅ Uses post categories for matching
+✅ Estimated reading time display
 
-✅ Displays related posts below content
+✅ Custom Words Per Minute (WPM) setting
+
+✅ Display before or after post content
 
 ✅ Lightweight and fast
 
-✅ No configuration required
+✅ No external dependencies
 
-✅ Works with any WordPress theme
+✅ Beginner-friendly
 
 ---
 
-## How It Works
+## Screenshot
 
-When a visitor opens a blog post, the plugin:
+<img width="2940" height="1606" alt="image" src="https://github.com/user-attachments/assets/2b8bcfa0-30f7-4e2b-b411-c3e1f8aa72f1" />
+<img width="2940" height="1454" alt="image" src="https://github.com/user-attachments/assets/e732949e-448d-4932-a924-b0df32d2b91d" />
 
-1. Gets the categories assigned to the current post.
-2. Searches for other posts in the same categories.
-3. Excludes the current post.
-4. Displays up to 5 related posts below the article.
+
+Example Output:
+
+📖 5 min read
 
 ---
 
 ## Installation
 
 1. Download the plugin.
-2. Upload the plugin folder to:
+2. Upload the `simple-reading-time` folder to:
 
-```text
+```
 /wp-content/plugins/
 ```
 
-3. Activate the plugin from:
+3. Activate the plugin from **WordPress Admin → Plugins**.
+4. Go to:
 
-```text
-WordPress Dashboard → Plugins
+```
+Settings → Reading Time
 ```
 
-4. That's it! Related posts will automatically appear below single posts.
+5. Configure:
+   - Reading Speed (Words Per Minute)
+   - Display Position
+
+6. Save changes.
 
 ---
 
-## Example Output
+## Settings
 
-### Related Posts
+| Setting | Description |
+|----------|------------|
+| Words Per Minute | Reading speed used for calculation |
+| Display Position | Show reading time before or after content |
 
-- How to Learn WordPress
-- Best SEO Tips for Beginners
-- Complete Blogging Guide
-- Website Speed Optimization
-- WordPress Security Checklist
+---
+
+## How It Works
+
+The plugin:
+
+1. Counts the total words in a post.
+2. Divides the count by the configured reading speed.
+3. Calculates the estimated reading time.
+4. Displays a simple reading time indicator.
+
+Example:
+
+```
+1000 words ÷ 200 WPM = 5 min read
+```
 
 ---
 
@@ -69,38 +91,41 @@ WordPress Dashboard → Plugins
 
 ## Changelog
 
-### 1.0.0
+### Version 1.0.0
 
-- Initial release
-- Category-based related posts
-- Automatic display below content
-- Lightweight implementation
+- Initial Release
+- Reading Time Calculation
+- Reading Speed Settings
+- Position Settings
 
 ---
 
-## Future Roadmap
+## Roadmap
 
-- Custom number of related posts
-- Thumbnail support
-- Grid layout
-- Category selection
-- Tag-based matching
-- Related posts widget
-- Gutenberg block
-- AJAX loading
+Planned features for future releases:
+
+- Word Count Display
+- Reading Progress Bar
+- Shortcode Support
+- Custom Icons
+- Gutenberg Block
+- Custom Text Labels
+- Support for Custom Post Types
 
 ---
 
 ## Author
 
-NRW India
+**NRW India**
 
 Website: https://nrwone.in
 
-Plugin Hub: https://wp.nrwone.in
+Plugin Page: https://wp.nrwone.in
 
 ---
 
 ## License
 
 GPL v2 or later
+
+Licensed under the GNU General Public License.
